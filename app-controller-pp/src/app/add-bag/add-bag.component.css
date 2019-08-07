@@ -1,0 +1,19 @@
+.border{
+    border: 1px solid gray;
+}
+
+.form{
+    display: block;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-50{
+    width: 49%;
+}
+
+.w-25{
+    width: 24%;
+}

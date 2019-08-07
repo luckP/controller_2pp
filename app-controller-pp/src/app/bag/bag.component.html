@@ -1,0 +1,99 @@
+<app-top-bar [title]="'Bag'" [className]="'AddBagComponent'"></app-top-bar>
+<mat-card class="card">
+
+    <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field> 
+        <div style="overflow: scroll">
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        
+        <!-- id -->
+        <ng-container matColumnDef="id">
+            <th class="table-head" mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- num_bag -->
+        <ng-container matColumnDef="num_bag">
+            <th class="table-head" mat-header-cell *matHeaderCellDef> NUMBER BAG </th>
+            <td mat-cell *matCellDef="let element"> {{element.num_bag}} </td>
+        </ng-container>
+
+        <!-- start_time -->
+        <ng-container matColumnDef="start_time">
+            <th class="table-head" mat-header-cell *matHeaderCellDef> START TIME </th>
+            <td mat-cell *matCellDef="let element"> {{element.start_time}} </td>
+        </ng-container>
+
+        <!-- end_time -->
+        <ng-container matColumnDef="end_time">
+            <th class="table-head" mat-header-cell *matHeaderCellDef> END TIME </th>
+            <td mat-cell *matCellDef="let element"> {{element.end_time}} </td>
+        </ng-container>
+
+        <!-- mp_lot -->
+        <ng-container matColumnDef="mp_lot">
+            <th class="table-head" mat-header-cell *matHeaderCellDef> MP LOT </th>
+            <td mat-cell *matCellDef="let element"> {{element.mp_lot}} </td>
+        </ng-container>
+
+        <!-- bag_weight -->
+        <ng-container matColumnDef="bag_weight">
+            <th class="table-head" mat-header-cell *matHeaderCellDef> BAG WEIGHT </th>
+            <td mat-cell *matCellDef="let element"> {{element.bag_weight}} </td>
+        </ng-container>
+
+        <!-- total_weight -->
+        <ng-container matColumnDef="total_weight">
+            <th class="table-head" mat-header-cell *matHeaderCellDef> TOTAL WEIGHT </th>
+            <td mat-cell *matCellDef="let element"> {{element.total_weight}} </td>
+        </ng-container>
+        <!-- ID -->
+        <ng-container matColumnDef="quantity_produced">
+            <th class="table-head" mat-header-cell *matHeaderCellDef> Nº PRODUCED </th>
+            <td mat-cell *matCellDef="let element"> {{element.quantity_produced}} </td>
+        </ng-container>
+
+        <!-- employee -->
+        <ng-container matColumnDef="employee">
+            <th class="table-head" mat-header-cell *matHeaderCellDef> EMPLOYEE </th>
+            <td mat-cell *matCellDef="let element"> {{element.employee.id}} </td>
+        </ng-container>
+
+        <!-- factory_machine -->
+        <ng-container matColumnDef="factory_machine">
+            <th class="table-head" mat-header-cell *matHeaderCellDef> MACHINE </th>
+            <td mat-cell *matCellDef="let element"> {{element.factory_machine.id}} </td>
+        </ng-container>
+
+        <!-- material_color -->
+        <ng-container matColumnDef="material_color">
+            <th class="table-head" mat-header-cell *matHeaderCellDef> COLOR </th>
+            <td mat-cell *matCellDef="let element"> {{element.material_color.id}} </td>
+        </ng-container>
+
+        <!-- material_type -->
+        <ng-container matColumnDef="material_type">
+            <th class="table-head" mat-header-cell *matHeaderCellDef> TYPE </th>
+            <td mat-cell *matCellDef="let element"> {{element.material_type.id}} </td>
+        </ng-container>
+
+        <!-- note -->
+        <ng-container matColumnDef="note">
+            <th class="table-head" mat-header-cell *matHeaderCellDef> NOTE </th>
+            <td mat-cell *matCellDef="let element"
+            matTooltip="{{ element.note }}"
+            [matTooltipPosition]="'before'"
+            > {{element.note | slice:0:6}} </td>
+        </ng-container>
+        
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]"  ></mat-paginator> 
+</mat-card>
+
+

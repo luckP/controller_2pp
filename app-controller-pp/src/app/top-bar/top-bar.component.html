@@ -1,0 +1,14 @@
+<mat-card class="menu card">
+    <!-- <button type="button" mat-button  >click</button> -->
+    <button mat-icon-button aria-label="Example icon-button with a heart icon" (click)="sidenavService.toggle()">
+        <mat-icon *ngIf="sidenavService.showFiller">close</mat-icon>
+        <mat-icon *ngIf="!sidenavService.showFiller">menu</mat-icon>
+    </button>
+
+    <span> {{title}} </span>
+
+    <button mat-stroked-button color="primary" class="add-button" (click)="openDialog()">
+        Add
+        <mat-icon>add</mat-icon>
+    </button>
+</mat-card>

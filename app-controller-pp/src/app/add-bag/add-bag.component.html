@@ -1,0 +1,102 @@
+<form class="form">
+
+    <mat-form-field class="w-50">
+        <input matInput placeholder="NUMBER BAG" [formControl]="numBagFormControl"
+               [errorStateMatcher]="matcher">
+          <mat-error *ngIf="numBagFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-50">
+        <input matInput placeholder="START TIME" [formControl]="startTimeFormControl"
+               [errorStateMatcher]="matcher">
+          <mat-error *ngIf="startTimeFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-50">
+        <input matInput placeholder="END TIME" [formControl]="endTimeFormControl"
+               [errorStateMatcher]="matcher">
+          <mat-error *ngIf="endTimeFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-50">
+        <input matInput placeholder="MP LOT" [formControl]="mpLotFormControl"
+               [errorStateMatcher]="matcher">
+          <mat-error *ngIf="mpLotFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-50">
+        <input matInput placeholder="BAG WEIGHT" [formControl]="bagWeightFormControl"
+               [errorStateMatcher]="matcher">
+          <mat-error *ngIf="bagWeightFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-50">
+        <input matInput placeholder="TOTAL WEIGHT" [formControl]="totalWeightFormControl"
+               [errorStateMatcher]="matcher">
+          <mat-error *ngIf="totalWeightFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-25">
+        <input matInput placeholder="QUANTITY PRODUCED" [formControl]="quantityProducedFormControl"
+               [errorStateMatcher]="matcher">
+          <mat-error *ngIf="quantityProducedFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-25">
+        <input matInput placeholder="EMPLOYEEemployeeFormControl" [formControl]="employeeFormControl"
+               [errorStateMatcher]="matcher">
+          <mat-error *ngIf="employeeFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-25">
+        <input matInput placeholder="factoryMachineFormControl" [formControl]="factoryMachineFormControl"
+               [errorStateMatcher]="matcher">
+          <mat-error *ngIf="factoryMachineFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-25">
+        <input matInput placeholder="materialColorFormControl" [formControl]="materialColorFormControl"
+               [errorStateMatcher]="matcher">
+          <mat-error *ngIf="materialColorFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100">
+        <input matInput placeholder="materialTypeFormControl" [formControl]="materialTypeFormControl"
+               [errorStateMatcher]="matcher">
+          <mat-error *ngIf="materialTypeFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100">
+        <input matInput placeholder="noteFormControl" [formControl]="noteFormControl"
+               [errorStateMatcher]="matcher">
+          <mat-error *ngIf="noteFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+  </form>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button cdkFocusInitial>Ok</button>
+  </div>

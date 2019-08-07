@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+  }
+
+  .table-head{
+    text-align: center!important;
+    padding: 15px!important;
+  }
+
+  .card{
+    margin: 15px!important;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .mat-card{
+      width: calc(100xw - 30px);
+  }
+
+  table.mat-elevation-z8.mat-table {
+    text-align: center;
+  }
